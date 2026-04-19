@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(91, 200, 245, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(245, 166, 35, 0.16), transparent 30%),
+    linear-gradient(180deg, #faf7f0 0%, #eef5ef 48%, #e7f0f2 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', 'Manrope', sans-serif;
+  --text: #35514a;
+  --text-strong: #123226;
+  --muted: #678078;
+  --panel: rgba(250, 247, 240, 0.84);
+  --border-strong: rgba(26, 74, 46, 0.12);
+  --accent-deep: #1a4a2e;
+  --accent-amber: #f5a623;
+  --accent-sky: #5bc8f5;
+  --shadow: 0 22px 60px rgba(18, 50, 38, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
