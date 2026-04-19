@@ -291,6 +291,10 @@ function App() {
   const shareText = buildShareText(completedActions, progress.totalPoints)
   const appUrl = getAppUrl()
   const isDesktopLayout = useIsDesktop()
+  const completedTodayLabel =
+    completedActions.length === 0
+      ? 'Start with one practical action.'
+      : `${completedActions.length} action${completedActions.length === 1 ? '' : 's'} completed today.`
 
   useEffect(() => {
     QRCode.toDataURL(appUrl, {
@@ -494,6 +498,26 @@ function App() {
           ) : null}
         </aside>
       </section>
+      ) : null}
+
+      {isDesktopLayout && desktopView === 'discover' ? (
+        <section className="desktop-insight-grid">
+          <article className="desktop-insight-card">
+            <p className="section-kicker">Outcome</p>
+            <h3>{completedTodayLabel}</h3>
+            <p>The app should feel like it turns vague climate intent into one next move you can actually take.</p>
+          </article>
+          <article className="desktop-insight-card">
+            <p className="section-kicker">Actionable Angle</p>
+            <h3>Specific habits beat generic sustainability talk.</h3>
+            <p>LRT, tapau, AC settings, pasar bags, and lunch choices are more persuasive than carbon sliders.</p>
+          </article>
+          <article className="desktop-insight-card">
+            <p className="section-kicker">Momentum</p>
+            <h3>{progress.totalPoints} points from small choices that still read as real.</h3>
+            <p>Good challenge entries feel usable, local, and instantly demoable. That is the bar here.</p>
+          </article>
+        </section>
       ) : null}
 
       {(!isDesktopLayout || desktopView === 'discover') ? (
@@ -866,10 +890,21 @@ function computeNextStreak(lastActiveDate: string | null, currentStreak: number)
 }
 
 function generateHandle() {
-  const prefixes = ['Green', 'Solar', 'Urban', 'Quiet', 'Mamak', 'Bamboo', 'Tumbler', 'Transit']
-  const animals = ['Otter', 'Hornbill', 'Tiger', 'Civet', 'Myna', 'Sunbird', 'Tapir', 'Gecko']
-  const places = ['KL', 'PJ', 'JB', 'Penang', 'Subang', 'Ampang', 'Kuching']
-  return `${pick(prefixes)}${pick(animals)}${pick(places)}`
+  const labels = [
+    'KLCommuter',
+    'PJTumblerClub',
+    'TapauLessToday',
+    'PasarBagRegular',
+    'MRTLunchRunner',
+    'CoolerAt25C',
+    'WalkMoreKL',
+    'EarthDayNeighbor',
+    'TransitOverGrab',
+    'BekasBeliever',
+    'LessPlasticToday',
+    'LunchBreakWalker',
+  ]
+  return pick(labels)
 }
 
 function pick<T>(items: T[]) {

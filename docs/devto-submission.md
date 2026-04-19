@@ -24,8 +24,9 @@ The app includes:
 
 - a welcome modal so first-time visitors never hit an empty state
 - an action picker with category filters, local nouns, and impact labels
+- a personalized action prompt for users to describe their situation and get a realistic next move
 - progress tracking with points and streak logic
-- a screenshot-ready share card
+- a screenshot-ready share card with QR code and join-in CTA
 - an anonymous community pledge wall with seeded entries and localStorage persistence
 
 Everything runs client-side and uses `localStorage`, so there is no login, backend, or setup friction.
@@ -40,9 +41,11 @@ Local demo flow:
 4. Mark 2-3 actions as completed
 5. Watch the point total and streak update instantly
 6. Add a pledge to the community wall
-7. End on the share card / copy pledge flow
+7. End on the share card / poster-style export flow
 
-If I deploy this, I will add the live URL here.
+Live demo:
+
+`[add your live URL here]`
 
 ## Code
 
@@ -67,8 +70,10 @@ A few decisions shaped the build:
 
 - I chose a frontend-only architecture so the app could not fail on auth, database, or API setup.
 - I used seeded action data and seeded community pledges so the product would feel alive on first load.
+- I added a lightweight personalized prompt so the app could feel responsive to a user’s situation without turning into a full chatbot.
 - I treated impact as **indicative, not scientific**. The point is to motivate practical action, not pretend to produce perfect carbon accounting.
 - I added a social layer with an anonymous pledge wall because this challenge also rewards reaction and engagement on the DEV post.
+- I designed the share card as a poster-style export with a QR code because reaction and click-through are part of the submission strategy, not just decoration.
 
 The hardest design problem was balancing local identity with global readability. I wanted the product to feel Malaysian without making international judges feel excluded or confused. That is why the UI stays in English, but local references like `tapau`, `kopitiam`, `pasar`, and `TNB` are embedded in ways that stay understandable from context.
 

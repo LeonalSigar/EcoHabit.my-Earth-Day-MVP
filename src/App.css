@@ -113,6 +113,7 @@
 }
 
 .hero-panel,
+.desktop-insight-grid,
 .main-grid,
 .sidebar {
   display: grid;
@@ -124,6 +125,7 @@
 .toolbar-panel,
 .prompt-panel,
 .composer-shell,
+.desktop-insight-card,
 .action-panel,
 .share-card,
 .pledge-panel {
@@ -223,6 +225,25 @@
   background:
     linear-gradient(180deg, rgba(26, 74, 46, 0.08), rgba(250, 247, 240, 0.94)),
     var(--panel);
+}
+
+.desktop-insight-card {
+  border: 1px solid var(--border-strong);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.desktop-insight-card h3 {
+  margin: 6px 0 10px;
+  color: var(--text-strong);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.desktop-insight-card p:last-child {
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .score-value,
@@ -710,6 +731,11 @@
     align-items: start;
   }
 
+  .desktop-insight-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 16px;
+  }
+
   .main-grid {
     grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.86fr);
     align-items: start;
@@ -743,6 +769,7 @@
   .toolbar-panel,
   .prompt-panel,
   .composer-shell,
+  .desktop-insight-card,
   .action-panel,
   .share-card,
   .pledge-panel,
