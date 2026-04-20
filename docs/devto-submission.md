@@ -45,7 +45,7 @@ Local demo flow:
 
 Live demo:
 
-`[add your live URL here]`
+`https://eco-habit-my-earth-day-mvp.vercel.app`
 
 ## Code
 
@@ -60,7 +60,7 @@ The code is intentionally small and flat because this was built as a fast hackat
 
 GitHub repo:
 
-`[add your GitHub repo link here]`
+`https://github.com/LeonalSigar/EcoHabit.my-Earth-Day-MVP`
 
 ## How I Built It
 

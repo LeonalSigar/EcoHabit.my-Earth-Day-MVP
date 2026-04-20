@@ -18,7 +18,7 @@ What I liked most about building this was the constraint: under a short deadline
 If you want to see the build write-up / repo:
 
 - DEV post: [add DEV link]
-- GitHub: [add GitHub link]
-- Live demo: [add live link]
+- GitHub: https://github.com/LeonalSigar/EcoHabit.my-Earth-Day-MVP
+- Live demo: https://eco-habit-my-earth-day-mvp.vercel.app
 
 #buildinpublic #webdev #react #typescript #earthday #sustainability #malaysia #devchallenge
